@@ -1,0 +1,13 @@
+#
+# Copyright (c) 2015, Lambertus Gorter <l.gorter@gmail.com>
+# All rights reserved.
+#
+include module.mk
+
+#nothing to built since the libraries are prebuilt
+.PHONY: all clean
+
+all:
+
+clean:
+
