@@ -5,6 +5,6 @@ MODULE_BUILD_PATH := $(BUILD_PATH)/$(MODULE_NAME)
 
 #  All paths must be absolute since they may be used for building from different paths.
 LIBS    += $(MODULE_NAME)
-LIBDIR  += $(MODULE_BUILD_PATH)
+LIBDIR  += $(MODULE_BUILD_PATH)/lib
 INCDIR  += $(MODULE_PATH)
 
