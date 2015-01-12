@@ -40,8 +40,6 @@ CFLAGS += $(addprefix -L,$(LIBDIR))
 CFLAGS += $(addprefix -I,$(INCDIR))
 
 #Expand LDFLAGS with Libraries and library paths
-#FIXME linkerscript is still hardcoded
-LDFLAGS += -T$(SDK_PATH)/espressif/ld/eagle.app.v6.ld 
 LDFLAGS += $(addprefix -L,$(LIBDIR))
 LDFLAGS += -Wl,--start-group $(addprefix -l,$(LIBS)) -Wl,--end-group
 

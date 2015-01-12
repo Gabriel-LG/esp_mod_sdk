@@ -8,7 +8,7 @@
 # What to build
 BUILD_TYPE      ?= debug
 PROJECT_MODULES := blinky
-SDK_MODULES     := espressif xtensa
+SDK_MODULES     := esp/core esp/json esp/linker esp/lwip esp/ssl esp/upgrade xtensa
 OTHER_MODULES   :=
 
 
