@@ -3,6 +3,33 @@
 # All rights reserved.
 #
 
-#nothing to built since the libraries are prebuilt
-.PHONY: module
+include module.mk
+
+SOURCES     := $(wildcard src/app/*.c)
+SOURCES     += $(wildcard src/crypto/*.c)
+SOURCES     += $(wildcard src/ssl/*.c)
+
+LIB         := $(LIBDIR)/lib$(MODULE_NAME).a
+
+OBJS        := $(patsubst %.c, $(MODULE_BUILD_PATH)/%.o, $(SOURCES))
+DEPS        := $(patsubst %.o, %.d, $(OBJS))
+
+
+module: $(LIB)
+
+$(LIB): $(OBJS)
+	mkdir -p $(dir $@)
+	$(AR) cru $@ $^
+
+
+-include $(DEPS)
+
+$(MODULE_BUILD_PATH)/%.o: %.c
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(BUILD_PATH)
+
+.PHONY: clean
 

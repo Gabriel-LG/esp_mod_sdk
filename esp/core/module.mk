@@ -13,7 +13,7 @@ MODULE_BUILD_PATH := $(BUILD_PATH)/$(MODULE_NAME)
 
 
 # Append libraries built by this module to LIBS
-LIBS    += json lwip main net80211 phy pp ssl upgrade wpa
+LIBS    += main net80211 phy pp wpa
 # Append the library paths to LIBDIR
 LIBDIR  += $(MODULE_PATH)/lib
 # Append the include paths to INCDIR

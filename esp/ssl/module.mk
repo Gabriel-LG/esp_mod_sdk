@@ -13,8 +13,8 @@ MODULE_BUILD_PATH := $(BUILD_PATH)/$(MODULE_NAME)
 
 
 # Append libraries built by this module to LIBS
-LIBS    += lwip
+LIBS    += $(MODULE_NAME)
 # Append the library paths to LIBDIR
-LIBDIR  += $(MODULE_PATH)/lib
+LIBDIR  += $(MODULE_BUILD_PATH)/lib
 # Append the include paths to INCDIR
 INCDIR  += $(MODULE_PATH)/include $(MODULE_PATH)/include/json
