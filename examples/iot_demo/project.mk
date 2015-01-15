@@ -8,7 +8,7 @@
 # What to build
 BUILD_TYPE      ?= debug
 PROJECT_MODULES := iot_demo driver 
-SDK_MODULES     := esp/core esp/json esp/linker esp/lwip esp/ssl esp/upgrade xtensa
+SDK_MODULES     := esp/blob esp/json esp/linker esp/lwip esp/ssl esp/upgrade xtensa
 OTHER_MODULES   :=
 
 
