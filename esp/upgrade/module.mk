@@ -17,4 +17,4 @@ LIBS    += $(MODULE_NAME)
 # Append the library paths to LIBDIR
 LIBDIR  += $(MODULE_BUILD_PATH)/lib
 # Append the include paths to INCDIR
-INCDIR  += $(MODULE_PATH)/include $(MODULE_PATH)/include/json
+INCDIR  += $(MODULE_PATH)/include

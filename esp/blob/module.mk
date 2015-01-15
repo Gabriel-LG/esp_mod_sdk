@@ -17,4 +17,4 @@ LIBS    += main net80211 phy pp wpa
 # Append the library paths to LIBDIR
 LIBDIR  += $(MODULE_PATH)/lib
 # Append the include paths to INCDIR
-INCDIR  += $(MODULE_PATH)/include $(MODULE_PATH)/include/json
+INCDIR  += $(MODULE_PATH)/include
